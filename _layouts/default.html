@@ -3,26 +3,26 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Why does APT not use HTTPS?">
+    <meta name="description" content="{{ page.description }}">
     <meta name="author" content="Chris Lamb">
 
   <meta name="twitter:site" content="@lolamby">
   <meta name="twitter:creator" content="@lolamby">
-  <meta name="twitter:title" content="Why does APT not use HTTPS?">
-  <meta name="twitter:description" content="Why does APT in Debian/Ubuntu, etc. not use SSL for package downloads?">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.description }}">
   <meta name="twitter:card" content="summary">
 
-  <meta property="og:site_name" content="Why does APT not use HTTPS?" />
-  <meta property="og:description" content="Why does APT in Debian/Ubuntu, etc. not use SSL for package downloads?" />
+  <meta property="og:site_name" content="{{ page.title }}" />
+  <meta property="og:description" content="{{ page.description }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ site.url }}" />
-  <meta property="og:title" content="Why does APT not use HTTPS?" />
+  <meta property="og:title" content="{{ page.title }}" />
 
   <meta property="og:image" content="{{ '/img/hexagonal.png' | absolute_url }}?{{ site.time | date: '%s%N' }}" />
   <meta property="og:image:width" content="209" />
   <meta property="og:image:height" content="209" />
 
-    <title>Why does APT not use HTTPS?</title>
+    <title>{{ page.title }}</title>
 
     <link href="{{ '/css/bootstrap.min.css' | relative_url }}?{{ site.time | date: '%s%N' }}" rel="stylesheet">
     <link href="{{ '/css/font-awesome.min.css' | relative_url }}?{{ site.time | date: '%s%N' }}" rel="stylesheet" type="text/css">
@@ -39,8 +39,8 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="post-heading">
-              <h1>Why does APT not use HTTPS?</h1>
-              <span class="meta">"Isn't it more secure&hellip;?"</span>
+              <h1>{{ page.title }}</h1>
+              <span class="meta">{{ page.subtitle }}</span>
             </div>
           </div>
         </div>
