@@ -1,5 +1,8 @@
 ---
 layout: default
+title: Why does APT not use HTTPS?
+subtitle: "\"Isn't it more secure...?\""
+description: Why does APT in Debian/Ubuntu, etc. not use SSL for package downloads?
 ---
 {: #disclaimer}
 <small>
