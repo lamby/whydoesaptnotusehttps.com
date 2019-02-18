@@ -8,12 +8,31 @@
   text-decoration: underline;
 }
 
-h3.section-heading {
+h2, h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 60px;
+}
+
+h3 {
   font-size: 24px;
   padding-bottom: 10px;
 }
 
-sup.ref a {
+.footnote {
   font-size: 80%;
   color: #0088dd;
+}
+
+.footnote::before {
+  content: "[";
+}
+
+.footnote::after {
+  content: "]";
+}
+
+#disclaimer {
+  font-style: italic;
+  text-align: center;
 }
