@@ -10,15 +10,20 @@ description: Why does APT in Debian/Ubuntu, etc. not use SSL for package downloa
 particularly before [CVE-2019-3462](https://lists.debian.org/debian-security-announce/2019/msg00010.html). It does not represent my personal opinion nor that of Debian/Ubuntu.)
 </small>
 
-## tl;dr
+## Does HTTPS guarantee the integrity of packages?
 
 https is used to prevent intruders from being able to listen to
 communications between you and websites you visit, as well as to avoid
 data being modified without your knowledge.
 
-However, files obtained by APT are accompanied by their own signature
-which allows your system to check they originated from your
-distribution.
+HTTPS can not detect if malicious tampering has occurred on the disks
+of the server you are downloading from. There is little point
+"securely" transfering a compromised package.
+
+## How does APT guard against tampering?
+
+Files obtained by APT are accompanied by their own signature which
+allows your system to check they originated from your distribution.
 
 These signatures are checked against a small set of trusted keys
 already stored on your computer. Downloaded files are rejected by APT
@@ -26,10 +31,6 @@ if they are signed by an unknown key[^apt-unknown-key] or are missing
 valid signatures. This ensures that the packages you are installing
 were authorised by your distribution and have not been modified or
 replaced since.
-
-HTTPS can not detect if malicious tampering has occurred on the disks
-of the server you are downloading from. There is little point
-"securely" transfering a compromised package.
 
 ## But what about privacy?
 
