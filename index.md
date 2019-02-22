@@ -30,6 +30,30 @@ will depend on the cost and difficulty of maintaining valid TLS
 certificates on the mirror network, plus considerations about caching
 in low-bandwith environments.
 
+## How can I use HTTPS for apt?
+
+It has been possible to use HTTPS mirrors with apt for a long time, if
+your distribution's mirror network supports it.
+
+As a prerequisite, for versions of apt before 1.5 (i.e. Debian stretch
+and earlier) you must first install the
+<code>apt-transport-https</code> package.  Later versions include
+https support by default.
+
+If you are using Debian, update your
+<code>/etc/apt/sources.list</code> entries to point to the official
+https mirror redirector:
+
+    deb https://deb.debian.org/debian/ <dist> <suite>
+    deb-src https://deb.debian.org/debian/ <dist> <suite>
+
+e.g. for Debian unstable:
+
+    deb https://deb.debian.org/debian/ unstable main
+    deb-src https://deb.debian.org/debian/ unstable main
+
+For other distributions, consult your distribution's documentation.
+
 ## Does HTTPS guarantee the integrity of packages?
 
 https is used to prevent intruders from being able to listen to
