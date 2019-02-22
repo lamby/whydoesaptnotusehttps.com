@@ -10,6 +10,26 @@ description: Why does APT in Debian/Ubuntu, etc. not use SSL for package downloa
 particularly before [CVE-2019-3462](https://lists.debian.org/debian-security-announce/2019/msg00010.html). It does not represent my personal opinion nor that of Debian/Ubuntu.)
 </small>
 
+## tl;dr
+
+Accessing mirrors over HTTPS would not prevent a compromised mirror
+tampering with packages, so APT already has other mechanisms to guard
+against this.
+
+Also, HTTPS would not stop a determined attacker deducing which apt
+packages your system was downloading (though this becomes more
+difficult).
+
+However there may be other security benefits to using HTTPS for apt
+updates, in that it should greatly increase the difficulty for a
+man-in-the-middle attacker to exploit future bugs in APT, or to
+temporarily delay the delivery of Release files to end users.
+
+Whether Debian or other distributions switch to HTTPS as a default
+will depend on the cost and difficulty of maintaining valid TLS
+certificates on the mirror network, plus considerations about caching
+in low-bandwith environments.
+
 ## Does HTTPS guarantee the integrity of packages?
 
 https is used to prevent intruders from being able to listen to
